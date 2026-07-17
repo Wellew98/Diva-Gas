@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<!--
+  DIVA GAS SUPPLIES — one-page website DRAFT v1
+  Built by Clarity Clicks · 2026-07-17
+  TO CONFIRM WITH OWNER before launch:
+    1. Is 073 484 3076 on WhatsApp? (all wa.me links point there)
+    2. Exact delivery suburbs (current list = educated guess, Joburg South)
+    3. "Gas heater servicing" claim (from a Google review — confirm they still do it)
+    4. Photos: replace flame placeholder art with real shopfront/delivery photos ASAP
+    5. Domain (e.g. divagas.co.za) — currently draft only
+  NAP is byte-identical to the GBP: Diva Gas Supplies Refilling & Exchange ·
+  18 Turffontein St, Towerby, Johannesburg, 2190 · 073 484 3076
+-->
+<html lang="en-ZA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gas Refills Towerby & Joburg South 24/7 | Diva Gas Supplies</title>
+<meta name="description" content="LPG gas refills & cylinder exchange in Towerby, Johannesburg — open 24 hours. 5kg to 48kg bottles, same-day delivery across Joburg South. WhatsApp 073 484 3076.">
+<meta property="og:title" content="Diva Gas Supplies — Gas Refills & Exchange, Towerby JHB, Open 24 Hours">
+<meta property="og:description" content="5kg–48kg LPG refills & exchanges. Same-day delivery across Joburg South. Cash or EFT on delivery.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23FFB25C'/%3E%3Cstop offset='.45' stop-color='%23FF7A1A'/%3E%3Cstop offset='1' stop-color='%232E9BFF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23g)' d='M32 4C32 4 12 26 12 41a20 20 0 0 0 40 0C52 26 32 4 32 4Z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Diva Gas Supplies Refilling & Exchange",
+  "description": "LPG gas cylinder refills and exchanges in Towerby, Johannesburg. 5kg to 48kg bottles, open 24 hours, same-day delivery across Johannesburg South.",
+  "slogan": "Safe Energy Gas To The People",
+  "telephone": "+27734843076",
+  "email": "divagas24hours@gmail.com",
+  "vatID": "4880243656",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "18 Turffontein St",
+    "addressLocality": "Towerby, Johannesburg",
+    "postalCode": "2190",
+    "addressCountry": "ZA"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": -26.2530569, "longitude": 28.04552 },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00", "closes": "23:59"
+  },
+  "sameAs": ["https://www.google.com/maps/place/?q=place_id:ChIJCXUr_xMPlR4R_2oTn5Jwxlc"],
+  "priceRange": "R",
+  "areaServed": "Johannesburg South"
+}
+</script>
+<style>
+:root{
+  --night:#0B1220;
+  --panel:#101A2E;
+  --panel-2:#15223B;
+  --line:#22314F;
+  --ink:#F4F7FB;
+  --ink-dim:#9FB0C9;
+  --flame:#FF7A1A;
+  --ember:#FFB25C;
+  --lpg:#2E9BFF;
+  --lpg-tip:#7FD0FF;
+  --wa:#25D366;
+  --radius:14px;
+  --disp:"Barlow Condensed",sans-serif;
+  --body:"Barlow",sans-serif;
+  --mono:"IBM Plex Mono",monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--night);
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:17px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--lpg-tip);outline-offset:3px;border-radius:4px}
+
+h1,h2,h3{font-family:var(--disp);text-transform:uppercase;letter-spacing:.015em;line-height:1.05;font-weight:700}
+h2{font-size:clamp(30px,4.6vw,44px);margin-bottom:14px}
+.kicker{
+  font-family:var(--mono);font-size:12.5px;font-weight:500;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--ember);margin-bottom:14px;display:block;
+}
+.sec{padding:84px 24px}
+.wrap{max-width:1080px;margin:0 auto}
+.sub{color:var(--ink-dim);max-width:620px}
+
+/* ---------- top bar ---------- */
+.bar{
+  position:sticky;top:0;z-index:50;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:12px 24px;
+  background:rgba(11,18,32,.86);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.brand{display:flex;align-items:center;gap:11px;min-width:0}
+.brand svg{width:34px;height:34px;flex:none}
+.brand b{font-family:var(--disp);font-size:21px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;white-space:nowrap}
+.brand small{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.22em;color:var(--ink-dim);text-transform:uppercase}
+.bar-right{display:flex;align-items:center;gap:10px}
+.open-pill{
+  display:flex;align-items:center;gap:7px;font-family:var(--mono);font-size:12px;
+  color:var(--lpg-tip);border:1px solid var(--line);border-radius:99px;padding:7px 13px;white-space:nowrap;
+}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--lpg);box-shadow:0 0 10px var(--lpg)}
+@media (prefers-reduced-motion:no-preference){
+  .dot{animation:pulse 2.2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  font-family:var(--disp);font-weight:600;font-size:18px;letter-spacing:.04em;text-transform:uppercase;
+  padding:13px 22px;border-radius:11px;border:1px solid transparent;
+  transition:transform .15s ease,box-shadow .15s ease,background .15s ease;
+  cursor:pointer;white-space:nowrap;
+}
+.btn:hover{transform:translateY(-1px)}
+.btn-wa{background:var(--wa);color:#052e16;box-shadow:0 6px 22px rgba(37,211,102,.28)}
+.btn-wa:hover{box-shadow:0 10px 28px rgba(37,211,102,.4)}
+.btn-call{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn-call:hover{border-color:var(--lpg);color:var(--lpg-tip)}
+.btn-sm{font-size:15px;padding:9px 15px;border-radius:9px}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;padding:76px 24px 90px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(40px,6.2vw,66px);margin-bottom:18px}
+.hero h1 em{
+  font-style:normal;
+  background:linear-gradient(100deg,var(--ember) 0%,var(--flame) 38%,var(--lpg) 78%,var(--lpg-tip) 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero p.lead{font-size:19px;color:var(--ink-dim);max-width:540px;margin-bottom:28px}
+.hero p.lead strong{color:var(--ink)}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:30px}
+.hero-glow{
+  position:absolute;inset:auto auto -260px -180px;width:640px;height:640px;pointer-events:none;
+  background:radial-gradient(circle,rgba(255,122,26,.14) 0%,rgba(46,155,255,.08) 45%,transparent 70%);
+}
+.trust-row{display:flex;flex-wrap:wrap;gap:8px 22px;font-family:var(--mono);font-size:13px;color:var(--ink-dim)}
+.trust-row span{display:flex;align-items:center;gap:7px;white-space:nowrap}
+.trust-row .st{color:var(--ember)}
+
+/* flame figure */
+.flame-fig{position:relative;display:flex;align-items:center;justify-content:center;min-height:340px}
+.flame-fig svg{width:min(300px,72%);filter:drop-shadow(0 0 44px rgba(255,122,26,.22)) drop-shadow(0 30px 60px rgba(46,155,255,.18))}
+@media (prefers-reduced-motion:no-preference){
+  .flame-fig svg{animation:breathe 4.5s ease-in-out infinite}
+  @keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.025)}}
+}
+.flame-cap{
+  position:absolute;bottom:6px;left:50%;transform:translateX(-50%);
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-dim);white-space:nowrap;
+}
+.flame-cap b{color:var(--lpg-tip);font-weight:500}
+
+/* ---------- cylinders (signature) ---------- */
+#sizes{background:linear-gradient(180deg,var(--night) 0%,#0D1626 100%)}
+.cyl-row{
+  display:flex;align-items:flex-end;justify-content:space-between;gap:10px;
+  margin-top:46px;padding:0 6px;
+}
+.cyl{
+  flex:1;display:flex;flex-direction:column;align-items:center;gap:12px;
+  background:none;border:none;cursor:pointer;padding:10px 4px 14px;border-radius:12px;
+  transition:background .15s ease,transform .15s ease;
+}
+.cyl:hover{background:rgba(46,155,255,.07);transform:translateY(-3px)}
+.cyl svg{width:100%;max-width:86px}
+.cyl .body-fill{fill:var(--panel-2);stroke:var(--line);stroke-width:2;transition:fill .15s,stroke .15s}
+.cyl:hover .body-fill{fill:#1A2C4E;stroke:var(--lpg)}
+.cyl .valve{fill:none;stroke:var(--ink-dim);stroke-width:2.5;stroke-linecap:round}
+.cyl .kg{
+  font-family:var(--mono);font-weight:600;font-size:16px;color:var(--ink);
+  letter-spacing:.02em;
+}
+.cyl .use{font-family:var(--body);font-size:12.5px;color:var(--ink-dim);text-align:center;line-height:1.35}
+.cyl-note{
+  margin-top:26px;text-align:center;font-family:var(--mono);font-size:13px;color:var(--ink-dim);
+}
+.cyl-note a{color:var(--wa);border-bottom:1px dotted var(--wa)}
+
+/* ---------- services ---------- */
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px}
+.svc{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px 20px;
+}
+.svc .ic{
+  width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,rgba(255,122,26,.16),rgba(46,155,255,.16));
+  margin-bottom:16px;
+}
+.svc .ic svg{width:22px;height:22px;stroke:var(--ember);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.svc h3{font-size:21px;margin-bottom:7px}
+.svc p{font-size:14.5px;color:var(--ink-dim);line-height:1.5}
+
+/* ---------- delivery area ---------- */
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:30px;max-width:760px}
+.chip{
+  font-family:var(--mono);font-size:13px;color:var(--ink-dim);
+  border:1px solid var(--line);border-radius:99px;padding:7px 15px;
+}
+.chip.home{color:var(--ember);border-color:rgba(255,122,26,.45)}
+.area-cta{margin-top:28px;font-size:15.5px;color:var(--ink-dim)}
+.area-cta a{color:var(--wa);border-bottom:1px dotted var(--wa)}
+
+/* ---------- reviews ---------- */
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px}
+.rev{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px 22px;display:flex;flex-direction:column;gap:12px;
+}
+.rev .stars{color:var(--ember);font-size:14px;letter-spacing:3px}
+.rev p{font-size:15.5px;line-height:1.55}
+.rev .who{font-family:var(--mono);font-size:12.5px;color:var(--ink-dim);margin-top:auto}
+.rev-src{margin-top:24px;font-family:var(--mono);font-size:13px;color:var(--ink-dim)}
+.rev-src a{color:var(--lpg-tip);border-bottom:1px dotted var(--lpg-tip)}
+
+/* ---------- find us ---------- */
+#find .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.nap{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:28px;margin-top:34px;
+}
+.nap dt{
+  font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--ink-dim);margin-bottom:5px;
+}
+.nap dd{margin:0 0 20px;font-size:17px}
+.nap dd:last-child{margin-bottom:0}
+.nap dd a{border-bottom:1px dotted var(--lpg);color:var(--ink)}
+.nap dd.mono{font-family:var(--mono);font-size:16px}
+.map-box{
+  border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+  margin-top:34px;background:var(--panel);
+}
+.map-box iframe{width:100%;height:420px;border:0;display:block;filter:grayscale(.25) contrast(1.05)}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--line);padding:52px 24px 40px;background:#0A101D}
+.foot-wrap{max-width:1080px;margin:0 auto}
+.slogan{
+  font-family:var(--disp);font-weight:700;text-transform:uppercase;
+  font-size:clamp(26px,4vw,40px);line-height:1.1;margin-bottom:28px;
+  background:linear-gradient(100deg,var(--ember),var(--flame) 40%,var(--lpg) 80%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  max-width:560px;
+}
+.foot-cols{display:flex;flex-wrap:wrap;gap:24px 60px;justify-content:space-between;align-items:flex-end}
+.foot-nap{font-size:14.5px;color:var(--ink-dim);line-height:1.8}
+.foot-nap b{color:var(--ink);font-weight:600}
+.foot-nap .mono{font-family:var(--mono);font-size:13px}
+.foot-legal{font-family:var(--mono);font-size:11.5px;color:#5D6E8C;line-height:1.9;text-align:right}
+.foot-legal a{border-bottom:1px dotted #5D6E8C}
+
+/* ---------- mobile sticky CTA ---------- */
+.sticky-cta{display:none}
+
+/* ---------- responsive ---------- */
+@media (max-width:900px){
+  .hero .wrap{grid-template-columns:1fr;gap:26px}
+  .flame-fig{min-height:250px;order:-1}
+  .flame-fig svg{width:180px}
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .rev-grid{grid-template-columns:1fr}
+  #find .wrap{grid-template-columns:1fr}
+  .cyl-row{flex-wrap:wrap;justify-content:center;gap:4px}
+  .cyl{flex:0 1 31%}
+}
+@media (max-width:560px){
+  .sec{padding:64px 18px}
+  .hero{padding:44px 18px 70px}
+  .bar{padding:10px 14px}
+  .brand b{font-size:18px}
+  .bar .btn-call{display:none}
+  .open-pill{display:none}
+  .svc-grid{grid-template-columns:1fr}
+  .cyl{flex:0 1 30%}
+  .cyl .use{display:none}
+  body{padding-bottom:74px}
+  .sticky-cta{
+    display:flex;position:fixed;bottom:0;left:0;right:0;z-index:60;gap:1px;
+    border-top:1px solid var(--line);
+  }
+  .sticky-cta a{
+    flex:1;display:flex;align-items:center;justify-content:center;gap:8px;
+    font-family:var(--disp);font-weight:600;font-size:17px;text-transform:uppercase;letter-spacing:.05em;
+    padding:16px 10px;
+  }
+  .sticky-cta .s-wa{background:var(--wa);color:#052e16}
+  .sticky-cta .s-call{background:var(--panel-2);color:var(--ink)}
+  .sticky-cta svg{width:18px;height:18px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .btn,.cyl{transition:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ TOP BAR ============ -->
+<header class="bar">
+  <a class="brand" href="#top" aria-label="Diva Gas Supplies — home">
+    <svg viewBox="0 0 64 64" aria-hidden="true">
+      <defs>
+        <linearGradient id="fg1" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#FFB25C"/><stop offset=".45" stop-color="#FF7A1A"/><stop offset="1" stop-color="#2E9BFF"/>
+        </linearGradient>
+      </defs>
+      <path fill="url(#fg1)" fill-rule="evenodd" d="M32 3C32 3 11 26 11 41.5a21 21 0 0 0 42 0C53 26 32 3 32 3Zm0 17c0 0-10 11.4-10 19a10 10 0 0 0 20 0c0-7.6-10-19-10-19Z"/>
+    </svg>
+    <span><b>Diva Gas Supplies</b><small>Refilling &amp; Exchange · JHB South</small></span>
+  </a>
+  <div class="bar-right">
+    <span class="open-pill"><span class="dot" aria-hidden="true"></span>Open 24 hours</span>
+    <a class="btn btn-call btn-sm" href="tel:+27734843076">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      073 484 3076
+    </a>
+    <a class="btn btn-wa btn-sm" href="https://wa.me/27734843076?text=Hi%20Diva%20Gas%2C%20I%20need%20a%20gas%20refill." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<main id="top">
+<section class="hero" aria-label="Introduction">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <span class="kicker">Towerby · Johannesburg South · Open 24 hours</span>
+      <h1>Gas refills &amp; cylinder exchange in Towerby, <em>Johannesburg</em></h1>
+      <p class="lead">
+        Bottle empty in the middle of winter? Bring it to <strong>18 Turffontein St</strong> any hour of the
+        day or night — or WhatsApp us and we deliver <strong>same day</strong> across Joburg South.
+        Refills and exchanges from <strong>5kg to 48kg</strong>, cash or EFT on delivery.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-wa" href="https://wa.me/27734843076?text=Hi%20Diva%20Gas%2C%20I%20need%20a%20gas%20refill.%20My%20suburb%20is%3A%20" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          WhatsApp us now
+        </a>
+        <a class="btn btn-call" href="tel:+27734843076">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call 073 484 3076
+        </a>
+      </div>
+      <div class="trust-row" role="list">
+        <span role="listitem"><span class="st">★</span> 4.3 on Google (11 reviews)</span>
+        <span role="listitem">Same-day delivery</span>
+        <span role="listitem">Cash / EFT on delivery</span>
+        <span role="listitem">VAT registered</span>
+      </div>
+    </div>
+
+    <figure class="flame-fig" aria-hidden="true">
+      <svg viewBox="0 0 64 64">
+        <defs>
+          <linearGradient id="fg2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#FFB25C"/>
+            <stop offset=".42" stop-color="#FF7A1A"/>
+            <stop offset=".8" stop-color="#2E9BFF"/>
+            <stop offset="1" stop-color="#7FD0FF"/>
+          </linearGradient>
+        </defs>
+        <path fill="url(#fg2)" fill-rule="evenodd" d="M32 3C32 3 11 26 11 41.5a21 21 0 0 0 42 0C53 26 32 3 32 3Zm0 17c0 0-10 11.4-10 19a10 10 0 0 0 20 0c0-7.6-10-19-10-19Z"/>
+      </svg>
+      <figcaption class="flame-cap">A clean LPG flame burns <b>blue</b> — that's our standard.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ CYLINDER SIZES ============ -->
+<section class="sec" id="sizes" aria-label="Cylinder sizes">
+  <div class="wrap">
+    <span class="kicker">Refill or exchange — every size</span>
+    <h2>Pick your bottle</h2>
+    <p class="sub">Tap a size and your WhatsApp message is ready to send. Prices change with the monthly LPG rate — we'll confirm today's price straight away.</p>
+
+    <div class="cyl-row">
+      <!-- heights scaled to real proportions -->
+      <button class="cyl" data-kg="5" aria-label="5 kilogram cylinder — WhatsApp us for a refill">
+        <svg viewBox="0 0 90 110" style="max-width:52px">
+          <path class="valve" d="M45 12v-7M38 5h14"/>
+          <rect class="body-fill" x="20" y="26" width="50" height="76" rx="14"/>
+          <path class="valve" d="M33 26v-8a4 4 0 0 1 4-4h16a4 4 0 0 1 4 4v8"/>
+        </svg>
+        <span class="kg">5kg</span>
+        <span class="use">Camping · braai</span>
+      </button>
+      <button class="cyl" data-kg="9" aria-label="9 kilogram cylinder — WhatsApp us for a refill">
+        <svg viewBox="0 0 90 130" style="max-width:58px">
+          <path class="valve" d="M45 12v-7M38 5h14"/>
+          <rect class="body-fill" x="18" y="26" width="54" height="96" rx="15"/>
+          <path class="valve" d="M32 26v-8a4 4 0 0 1 4-4h18a4 4 0 0 1 4 4v8"/>
+        </svg>
+        <span class="kg">9kg</span>
+        <span class="use">Heater · stove</span>
+      </button>
+      <button class="cyl" data-kg="12" aria-label="12 kilogram cylinder — WhatsApp us for a refill">
+        <svg viewBox="0 0 90 146" style="max-width:62px">
+          <path class="valve" d="M45 12v-7M38 5h14"/>
+          <rect class="body-fill" x="17" y="26" width="56" height="112" rx="15"/>
+          <path class="valve" d="M31 26v-8a4 4 0 0 1 4-4h20a4 4 0 0 1 4 4v8"/>
+        </svg>
+        <span class="kg">12kg</span>
+        <span class="use">Home cooking</span>
+      </button>
+      <button class="cyl" data-kg="14" aria-label="14 kilogram cylinder — WhatsApp us for a refill">
+        <svg viewBox="0 0 90 158" style="max-width:64px">
+          <path class="valve" d="M45 12v-7M38 5h14"/>
+          <rect class="body-fill" x="16" y="26" width="58" height="124" rx="16"/>
+          <path class="valve" d="M30 26v-8a4 4 0 0 1 4-4h22a4 4 0 0 1 4 4v8"/>
+        </svg>
+        <span class="kg">14kg</span>
+        <span class="use">Kitchen + heater</span>
+      </button>
+      <button class="cyl" data-kg="19" aria-label="19 kilogram cylinder — WhatsApp us for a refill">
+        <svg viewBox="0 0 90 178" style="max-width:68px">
+          <path class="valve" d="M45 12v-7M38 5h14"/>
+          <rect class="body-fill" x="15" y="26" width="60" height="144" rx="16"/>
+          <path class="valve" d="M29 26v-8a4 4 0 0 1 4-4h24a4 4 0 0 1 4 4v8"/>
+        </svg>
+        <span class="kg">19kg</span>
+        <span class="use">Geyser · restaurant</span>
+      </button>
+      <button class="cyl" data-kg="48" aria-label="48 kilogram cylinder — WhatsApp us for a refill">
+        <svg viewBox="0 0 90 240" style="max-width:80px">
+          <path class="valve" d="M45 12v-7M38 5h14"/>
+          <rect class="body-fill" x="13" y="26" width="64" height="206" rx="17"/>
+          <path class="valve" d="M27 26v-8a4 4 0 0 1 4-4h28a4 4 0 0 1 4 4v8"/>
+        </svg>
+        <span class="kg">48kg</span>
+        <span class="use">Business · bulk</span>
+      </button>
+    </div>
+
+    <p class="cyl-note">Not sure which size you have? <a href="https://wa.me/27734843076?text=Hi%20Diva%20Gas%2C%20not%20sure%20what%20size%20my%20bottle%20is%20%E2%80%94%20can%20I%20send%20a%20photo%3F" target="_blank" rel="noopener">Send us a photo on WhatsApp</a> — we'll tell you.</p>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="sec" id="services" aria-label="Services">
+  <div class="wrap">
+    <span class="kicker">What we do</span>
+    <h2>In-store or to your door</h2>
+    <div class="svc-grid">
+      <article class="svc">
+        <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c0 0-6 6.5-6 11a6 6 0 0 0 12 0c0-4.5-6-11-6-11Z"/></svg></div>
+        <h3>Gas refills</h3>
+        <p>Bring any cylinder from 5kg to 48kg and we fill it while you wait — day or night, 24 hours.</p>
+      </article>
+      <article class="svc">
+        <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h13l-3-3M20 16H7l3 3"/></svg></div>
+        <h3>Cylinder exchange</h3>
+        <p>Swap your empty for a full, sealed cylinder in minutes. We collect empties on delivery too.</p>
+      </article>
+      <article class="svc">
+        <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h11v10H3zM14 10h4l3 3v4h-7zM7 20a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM18 20a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"/></svg></div>
+        <h3>Same-day delivery</h3>
+        <p>Order in the morning, cook on it tonight. Delivery across Joburg South — cash or EFT on arrival.</p>
+      </article>
+      <article class="svc">
+        <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a5 5 0 0 0-6.6 6.6L3 18v3h3l5.1-5.1a5 5 0 0 0 6.6-6.6l-3 3-2.5-.5-.5-2.5 3-3Z"/></svg></div>
+        <h3>Heater servicing</h3>
+        <p>We service gas heaters and help with after-hours emergencies — ask us on WhatsApp.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DELIVERY AREA ============ -->
+<section class="sec" id="area" aria-label="Delivery area">
+  <div class="wrap">
+    <span class="kicker">Same-day across Joburg South</span>
+    <h2>Where we deliver</h2>
+    <p class="sub">Based in Towerby, we deliver daily to the southern suburbs of Johannesburg:</p>
+    <div class="chips">
+      <span class="chip home">Towerby — home base</span>
+      <span class="chip">Turffontein</span>
+      <span class="chip">Rosettenville</span>
+      <span class="chip">Robertsham</span>
+      <span class="chip">Ridgeway</span>
+      <span class="chip">Southdale</span>
+      <span class="chip">Booysens</span>
+      <span class="chip">Kenilworth</span>
+      <span class="chip">La Rochelle</span>
+      <span class="chip">Regents Park</span>
+      <span class="chip">Mondeor</span>
+      <span class="chip">Winchester Hills</span>
+      <span class="chip">Glenvista</span>
+      <span class="chip">Ormonde</span>
+    </div>
+    <p class="area-cta">Don't see your suburb? <a href="https://wa.me/27734843076?text=Hi%20Diva%20Gas%2C%20do%20you%20deliver%20to%20my%20suburb%3F%20I%27m%20in%3A%20" target="_blank" rel="noopener">WhatsApp us your address</a> — if we can reach you same day, we will.</p>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="sec" id="reviews" aria-label="Customer reviews">
+  <div class="wrap">
+    <span class="kicker">From our Google reviews</span>
+    <h2>What customers say</h2>
+    <div class="rev-grid">
+      <blockquote class="rev">
+        <span class="stars" aria-label="5 star review">★★★★★</span>
+        <p>"Best service ever, they delivered same day I made a call and it was cash on delivery."</p>
+        <footer class="who">— Yenziwe · Google review</footer>
+      </blockquote>
+      <blockquote class="rev">
+        <span class="stars" aria-label="5 star review">★★★★★</span>
+        <p>"Great service, had many refills there. They also service gas heaters. The owner can even assist you after hours in case of emergency."</p>
+        <footer class="who">— Murendeni · Google review</footer>
+      </blockquote>
+      <blockquote class="rev">
+        <span class="stars" aria-label="5 star review">★★★★★</span>
+        <p>"Good service."</p>
+        <footer class="who">— Puseletso · Google review</footer>
+      </blockquote>
+    </div>
+    <p class="rev-src">4.3★ from 11 reviews — <a href="https://www.google.com/maps/place/?q=place_id:ChIJCXUr_xMPlR4R_2oTn5Jwxlc" target="_blank" rel="noopener">read them all on Google</a></p>
+  </div>
+</section>
+
+<!-- ============ FIND US ============ -->
+<section class="sec" id="find" aria-label="Location and contact">
+  <div class="wrap">
+    <div>
+      <span class="kicker">Open 24 hours — yes, really</span>
+      <h2>Find us in Towerby</h2>
+      <dl class="nap">
+        <dt>Business</dt>
+        <dd>Diva Gas Supplies Refilling &amp; Exchange</dd>
+        <dt>Address</dt>
+        <dd>18 Turffontein St, Towerby, Johannesburg, 2190<br><span style="color:var(--ink-dim);font-size:14.5px">(corner Van-Hulsteyn St)</span></dd>
+        <dt>Phone</dt>
+        <dd class="mono"><a href="tel:+27734843076">073 484 3076</a> · <a href="tel:+27617419201">061 741 9201</a></dd>
+        <dt>Email</dt>
+        <dd class="mono"><a href="mailto:divagas24hours@gmail.com">divagas24hours@gmail.com</a></dd>
+        <dt>Hours</dt>
+        <dd>Open 24 hours, 7 days a week</dd>
+      </dl>
+    </div>
+    <div class="map-box">
+      <iframe
+        title="Map — Diva Gas Supplies Refilling & Exchange, 18 Turffontein St, Towerby"
+        src="https://maps.google.com/maps?q=Diva%20Gas%20Supplies%20Refilling%20%26%20Exchange%2C%2018%20Turffontein%20St%2C%20Towerby&ll=-26.2530569,28.04552&z=15&output=embed"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="foot-wrap">
+    <p class="slogan">"Safe energy gas to the people"</p>
+    <div class="foot-cols">
+      <address class="foot-nap" style="font-style:normal">
+        <b>Diva Gas Supplies Refilling &amp; Exchange</b><br>
+        18 Turffontein St, Towerby, Johannesburg, 2190<br>
+        <span class="mono">073 484 3076 · 061 741 9201 · divagas24hours@gmail.com</span>
+      </address>
+      <div class="foot-legal">
+        VAT No. 4880243656<br>
+        © 2026 Diva Gas Supplies · <a href="https://www.google.com/maps/place/?q=place_id:ChIJCXUr_xMPlR4R_2oTn5Jwxlc" target="_blank" rel="noopener">Find us on Google Maps</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- mobile sticky CTA -->
+<nav class="sticky-cta" aria-label="Quick contact">
+  <a class="s-wa" href="https://wa.me/27734843076?text=Hi%20Diva%20Gas%2C%20I%20need%20a%20gas%20refill." target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+    WhatsApp
+  </a>
+  <a class="s-call" href="tel:+27734843076">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Call now
+  </a>
+</nav>
+
+<script>
+// Cylinder buttons → prefilled WhatsApp per size
+document.querySelectorAll('.cyl').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var kg = btn.getAttribute('data-kg');
+    var msg = encodeURIComponent('Hi Diva Gas, I need a ' + kg + 'kg refill/exchange. My suburb is: ');
+    window.open('https://wa.me/27734843076?text=' + msg, '_blank', 'noopener');
+  });
+});
+</script>
+</body>
+</html>
