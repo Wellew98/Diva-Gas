@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <!--
-  DIVA GAS SUPPLIES — one-page website DRAFT v1
-  Built by Clarity Clicks · 2026-07-17
+  DIVA GAS SUPPLIES — one-page website DRAFT v2
+  Built by Clarity Clicks · 2026-07-17 (v2: real bakkie + cylinder photography, true brand palette)
+  ASSETS: hero-bakkie-opt.webp + bottle-*kg-opt.webp are compressed web copies made from the
+  owner's originals (also sitting in this folder at full size — kept as raw/source, unused on page).
+  Palette pulled directly from the Diva bakkie livery + logo: flame-orange gradient (icon/flame only)
+  and a true royal/navy blue (from the "DIVA" wordmark + rear-wrap panel) — replaces the earlier
+  cyan-leaning placeholder blue from draft v1.
   TO CONFIRM WITH OWNER before launch:
     1. Is 073 484 3076 on WhatsApp? (all wa.me links point there)
     2. Exact delivery suburbs (current list = educated guess, Joburg South)
     3. "Gas heater servicing" claim (from a Google review — confirm they still do it)
-    4. Photos: replace flame placeholder art with real shopfront/delivery photos ASAP
-    5. Domain (e.g. divagas.co.za) — currently draft only
+    4. Is hero-bakkie-opt.webp a photo of the real truck or a design mockup? If it's a mockup,
+       swap for an actual photo of the bakkie/shopfront as soon as one exists — real beats rendered.
+    5. Real 12kg photo not supplied (invoice lists 5/9/12/14/19/48kg; our photo set only has
+       3/5/9/14/19/48kg) — site currently shows the 6 sizes we have real photography for.
+       Send a 12kg photo if you want it swapped in for the 3kg camping-bottle slot.
+    6. Domain (e.g. divagas.co.za) — currently draft only
   NAP is byte-identical to the GBP: Diva Gas Supplies Refilling & Exchange ·
   18 Turffontein St, Towerby, Johannesburg, 2190 · 073 484 3076
 -->
@@ -20,7 +29,7 @@
 <meta property="og:title" content="Diva Gas Supplies — Gas Refills & Exchange, Towerby JHB, Open 24 Hours">
 <meta property="og:description" content="5kg–48kg LPG refills & exchanges. Same-day delivery across Joburg South. Cash or EFT on delivery.">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23FFB25C'/%3E%3Cstop offset='.45' stop-color='%23FF7A1A'/%3E%3Cstop offset='1' stop-color='%232E9BFF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23g)' d='M32 4C32 4 12 26 12 41a20 20 0 0 0 40 0C52 26 32 4 32 4Z'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23FFB25C'/%3E%3Cstop offset='.55' stop-color='%23FF7A1A'/%3E%3Cstop offset='1' stop-color='%23F4650E'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23g)' d='M32 4C32 4 12 26 12 41a20 20 0 0 0 40 0C52 26 32 4 32 4Z'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -62,8 +71,10 @@
   --ink-dim:#9FB0C9;
   --flame:#FF7A1A;
   --ember:#FFB25C;
-  --lpg:#2E9BFF;
-  --lpg-tip:#7FD0FF;
+  --flame-deep:#F4650E;
+  --lpg:#1E45C7;
+  --lpg-tip:#5C86FF;
+  --royal-deep:#0C1B4A;
   --wa:#25D366;
   --radius:14px;
   --disp:"Barlow Condensed",sans-serif;
@@ -147,51 +158,63 @@ h2{font-size:clamp(30px,4.6vw,44px);margin-bottom:14px}
 .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:30px}
 .hero-glow{
   position:absolute;inset:auto auto -260px -180px;width:640px;height:640px;pointer-events:none;
-  background:radial-gradient(circle,rgba(255,122,26,.14) 0%,rgba(46,155,255,.08) 45%,transparent 70%);
+  background:radial-gradient(circle,rgba(255,122,26,.14) 0%,rgba(30,69,199,.10) 45%,transparent 70%);
 }
 .trust-row{display:flex;flex-wrap:wrap;gap:8px 22px;font-family:var(--mono);font-size:13px;color:var(--ink-dim)}
 .trust-row span{display:flex;align-items:center;gap:7px;white-space:nowrap}
 .trust-row .st{color:var(--ember)}
 
-/* flame figure */
-.flame-fig{position:relative;display:flex;align-items:center;justify-content:center;min-height:340px}
-.flame-fig svg{width:min(300px,72%);filter:drop-shadow(0 0 44px rgba(255,122,26,.22)) drop-shadow(0 30px 60px rgba(46,155,255,.18))}
-@media (prefers-reduced-motion:no-preference){
-  .flame-fig svg{animation:breathe 4.5s ease-in-out infinite}
-  @keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.025)}}
+/* hero bakkie photo */
+.hero-photo{position:relative}
+.hero-photo .frame{
+  position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);
+  box-shadow:0 0 0 1px rgba(255,178,92,.08),0 30px 70px rgba(12,27,74,.55),0 12px 30px rgba(255,122,26,.10);
 }
-.flame-cap{
-  position:absolute;bottom:6px;left:50%;transform:translateX(-50%);
-  font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--ink-dim);white-space:nowrap;
+.hero-photo img{width:100%;display:block;aspect-ratio:4/3;object-fit:cover}
+.hero-photo .frame::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(200deg,transparent 55%,rgba(11,18,32,.55) 100%);
+  pointer-events:none;
 }
-.flame-cap b{color:var(--lpg-tip);font-weight:500}
+.hero-photo figcaption{
+  margin-top:14px;font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-dim);text-align:center;
+}
+.hero-photo figcaption b{color:var(--ember);font-weight:500}
 
 /* ---------- cylinders (signature) ---------- */
 #sizes{background:linear-gradient(180deg,var(--night) 0%,#0D1626 100%)}
 .cyl-row{
-  display:flex;align-items:flex-end;justify-content:space-between;gap:10px;
-  margin-top:46px;padding:0 6px;
+  display:grid;grid-template-columns:repeat(6,1fr);gap:14px;
+  margin-top:46px;
 }
 .cyl{
-  flex:1;display:flex;flex-direction:column;align-items:center;gap:12px;
-  background:none;border:none;cursor:pointer;padding:10px 4px 14px;border-radius:12px;
-  transition:background .15s ease,transform .15s ease;
+  display:flex;flex-direction:column;align-items:center;gap:0;
+  background:var(--panel);border:1px solid var(--line);cursor:pointer;
+  border-radius:14px;overflow:hidden;padding:0;
+  transition:border-color .15s ease,transform .15s ease,box-shadow .15s ease;
+  font:inherit;color:inherit;text-align:center;
 }
-.cyl:hover{background:rgba(46,155,255,.07);transform:translateY(-3px)}
-.cyl svg{width:100%;max-width:86px}
-.cyl .body-fill{fill:var(--panel-2);stroke:var(--line);stroke-width:2;transition:fill .15s,stroke .15s}
-.cyl:hover .body-fill{fill:#1A2C4E;stroke:var(--lpg)}
-.cyl .valve{fill:none;stroke:var(--ink-dim);stroke-width:2.5;stroke-linecap:round}
+.cyl:hover{border-color:var(--lpg);transform:translateY(-4px);box-shadow:0 16px 34px rgba(12,27,74,.35)}
+.cyl .shot{
+  width:100%;aspect-ratio:1/1;background:#fff;display:flex;align-items:center;justify-content:center;
+  padding:12px;
+}
+.cyl .shot img{width:auto;height:100%;max-width:100%;object-fit:contain}
+.cyl .meta{padding:12px 8px 16px;width:100%}
 .cyl .kg{
-  font-family:var(--mono);font-weight:600;font-size:16px;color:var(--ink);
-  letter-spacing:.02em;
+  display:block;font-family:var(--mono);font-weight:600;font-size:16px;color:var(--ink);
+  letter-spacing:.02em;margin-bottom:3px;
 }
-.cyl .use{font-family:var(--body);font-size:12.5px;color:var(--ink-dim);text-align:center;line-height:1.35}
+.cyl .use{display:block;font-family:var(--body);font-size:12px;color:var(--ink-dim);line-height:1.3}
 .cyl-note{
   margin-top:26px;text-align:center;font-family:var(--mono);font-size:13px;color:var(--ink-dim);
 }
 .cyl-note a{color:var(--wa);border-bottom:1px dotted var(--wa)}
+@media (max-width:640px){
+  .cyl-row{grid-template-columns:repeat(3,1fr)}
+  .cyl .use{display:none}
+}
 
 /* ---------- services ---------- */
 .svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px}
@@ -278,8 +301,6 @@ footer{border-top:1px solid var(--line);padding:52px 24px 40px;background:#0A101
   .svc-grid{grid-template-columns:repeat(2,1fr)}
   .rev-grid{grid-template-columns:1fr}
   #find .wrap{grid-template-columns:1fr}
-  .cyl-row{flex-wrap:wrap;justify-content:center;gap:4px}
-  .cyl{flex:0 1 31%}
 }
 @media (max-width:560px){
   .sec{padding:64px 18px}
@@ -289,8 +310,6 @@ footer{border-top:1px solid var(--line);padding:52px 24px 40px;background:#0A101
   .bar .btn-call{display:none}
   .open-pill{display:none}
   .svc-grid{grid-template-columns:1fr}
-  .cyl{flex:0 1 30%}
-  .cyl .use{display:none}
   body{padding-bottom:74px}
   .sticky-cta{
     display:flex;position:fixed;bottom:0;left:0;right:0;z-index:60;gap:1px;
@@ -319,7 +338,7 @@ footer{border-top:1px solid var(--line);padding:52px 24px 40px;background:#0A101
     <svg viewBox="0 0 64 64" aria-hidden="true">
       <defs>
         <linearGradient id="fg1" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#FFB25C"/><stop offset=".45" stop-color="#FF7A1A"/><stop offset="1" stop-color="#2E9BFF"/>
+          <stop offset="0" stop-color="#FFB25C"/><stop offset=".55" stop-color="#FF7A1A"/><stop offset="1" stop-color="#F4650E"/>
         </linearGradient>
       </defs>
       <path fill="url(#fg1)" fill-rule="evenodd" d="M32 3C32 3 11 26 11 41.5a21 21 0 0 0 42 0C53 26 32 3 32 3Zm0 17c0 0-10 11.4-10 19a10 10 0 0 0 20 0c0-7.6-10-19-10-19Z"/>
@@ -370,19 +389,11 @@ footer{border-top:1px solid var(--line);padding:52px 24px 40px;background:#0A101
       </div>
     </div>
 
-    <figure class="flame-fig" aria-hidden="true">
-      <svg viewBox="0 0 64 64">
-        <defs>
-          <linearGradient id="fg2" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#FFB25C"/>
-            <stop offset=".42" stop-color="#FF7A1A"/>
-            <stop offset=".8" stop-color="#2E9BFF"/>
-            <stop offset="1" stop-color="#7FD0FF"/>
-          </linearGradient>
-        </defs>
-        <path fill="url(#fg2)" fill-rule="evenodd" d="M32 3C32 3 11 26 11 41.5a21 21 0 0 0 42 0C53 26 32 3 32 3Zm0 17c0 0-10 11.4-10 19a10 10 0 0 0 20 0c0-7.6-10-19-10-19Z"/>
-      </svg>
-      <figcaption class="flame-cap">A clean LPG flame burns <b>blue</b> — that's our standard.</figcaption>
+    <figure class="hero-photo">
+      <div class="frame">
+        <img src="hero-bakkie-opt.webp" alt="Diva Gas Supplies delivery bakkie, loaded with orange and blue LPG cylinders" width="1400" height="1050" loading="eager" decoding="async" fetchpriority="high">
+      </div>
+      <figcaption>Same bakkie, same-day <b>delivery</b> across Joburg South</figcaption>
     </figure>
   </div>
 </section>
@@ -395,64 +406,33 @@ footer{border-top:1px solid var(--line);padding:52px 24px 40px;background:#0A101
     <p class="sub">Tap a size and your WhatsApp message is ready to send. Prices change with the monthly LPG rate — we'll confirm today's price straight away.</p>
 
     <div class="cyl-row">
-      <!-- heights scaled to real proportions -->
+      <button class="cyl" data-kg="3" aria-label="3 kilogram cylinder — WhatsApp us for a refill">
+        <span class="shot"><img src="bottle-3kg-opt.webp" alt="3kg LPG gas cylinder" loading="lazy" decoding="async"></span>
+        <span class="meta"><span class="kg">3kg</span><span class="use">Camping · lighting</span></span>
+      </button>
       <button class="cyl" data-kg="5" aria-label="5 kilogram cylinder — WhatsApp us for a refill">
-        <svg viewBox="0 0 90 110" style="max-width:52px">
-          <path class="valve" d="M45 12v-7M38 5h14"/>
-          <rect class="body-fill" x="20" y="26" width="50" height="76" rx="14"/>
-          <path class="valve" d="M33 26v-8a4 4 0 0 1 4-4h16a4 4 0 0 1 4 4v8"/>
-        </svg>
-        <span class="kg">5kg</span>
-        <span class="use">Camping · braai</span>
+        <span class="shot"><img src="bottle-5kg-opt.webp" alt="5kg LPG gas cylinder" loading="lazy" decoding="async"></span>
+        <span class="meta"><span class="kg">5kg</span><span class="use">Braai · small home</span></span>
       </button>
       <button class="cyl" data-kg="9" aria-label="9 kilogram cylinder — WhatsApp us for a refill">
-        <svg viewBox="0 0 90 130" style="max-width:58px">
-          <path class="valve" d="M45 12v-7M38 5h14"/>
-          <rect class="body-fill" x="18" y="26" width="54" height="96" rx="15"/>
-          <path class="valve" d="M32 26v-8a4 4 0 0 1 4-4h18a4 4 0 0 1 4 4v8"/>
-        </svg>
-        <span class="kg">9kg</span>
-        <span class="use">Heater · stove</span>
-      </button>
-      <button class="cyl" data-kg="12" aria-label="12 kilogram cylinder — WhatsApp us for a refill">
-        <svg viewBox="0 0 90 146" style="max-width:62px">
-          <path class="valve" d="M45 12v-7M38 5h14"/>
-          <rect class="body-fill" x="17" y="26" width="56" height="112" rx="15"/>
-          <path class="valve" d="M31 26v-8a4 4 0 0 1 4-4h20a4 4 0 0 1 4 4v8"/>
-        </svg>
-        <span class="kg">12kg</span>
-        <span class="use">Home cooking</span>
+        <span class="shot"><img src="bottle-9kg-opt.webp" alt="9kg LPG gas cylinder" loading="lazy" decoding="async"></span>
+        <span class="meta"><span class="kg">9kg</span><span class="use">Heater · stove</span></span>
       </button>
       <button class="cyl" data-kg="14" aria-label="14 kilogram cylinder — WhatsApp us for a refill">
-        <svg viewBox="0 0 90 158" style="max-width:64px">
-          <path class="valve" d="M45 12v-7M38 5h14"/>
-          <rect class="body-fill" x="16" y="26" width="58" height="124" rx="16"/>
-          <path class="valve" d="M30 26v-8a4 4 0 0 1 4-4h22a4 4 0 0 1 4 4v8"/>
-        </svg>
-        <span class="kg">14kg</span>
-        <span class="use">Kitchen + heater</span>
+        <span class="shot"><img src="bottle-14kg-opt.webp" alt="14kg LPG gas cylinder" loading="lazy" decoding="async"></span>
+        <span class="meta"><span class="kg">14kg</span><span class="use">Kitchen + heater</span></span>
       </button>
       <button class="cyl" data-kg="19" aria-label="19 kilogram cylinder — WhatsApp us for a refill">
-        <svg viewBox="0 0 90 178" style="max-width:68px">
-          <path class="valve" d="M45 12v-7M38 5h14"/>
-          <rect class="body-fill" x="15" y="26" width="60" height="144" rx="16"/>
-          <path class="valve" d="M29 26v-8a4 4 0 0 1 4-4h24a4 4 0 0 1 4 4v8"/>
-        </svg>
-        <span class="kg">19kg</span>
-        <span class="use">Geyser · restaurant</span>
+        <span class="shot"><img src="bottle-19kg-opt.webp" alt="19kg LPG gas cylinder" loading="lazy" decoding="async"></span>
+        <span class="meta"><span class="kg">19kg</span><span class="use">Geyser · restaurant</span></span>
       </button>
       <button class="cyl" data-kg="48" aria-label="48 kilogram cylinder — WhatsApp us for a refill">
-        <svg viewBox="0 0 90 240" style="max-width:80px">
-          <path class="valve" d="M45 12v-7M38 5h14"/>
-          <rect class="body-fill" x="13" y="26" width="64" height="206" rx="17"/>
-          <path class="valve" d="M27 26v-8a4 4 0 0 1 4-4h28a4 4 0 0 1 4 4v8"/>
-        </svg>
-        <span class="kg">48kg</span>
-        <span class="use">Business · bulk</span>
+        <span class="shot"><img src="bottle-48kg-opt.webp" alt="48kg LPG gas cylinder" loading="lazy" decoding="async"></span>
+        <span class="meta"><span class="kg">48kg</span><span class="use">Business · bulk</span></span>
       </button>
     </div>
 
-    <p class="cyl-note">Not sure which size you have? <a href="https://wa.me/27734843076?text=Hi%20Diva%20Gas%2C%20not%20sure%20what%20size%20my%20bottle%20is%20%E2%80%94%20can%20I%20send%20a%20photo%3F" target="_blank" rel="noopener">Send us a photo on WhatsApp</a> — we'll tell you.</p>
+    <p class="cyl-note">Need a 12kg bottle? <a href="https://wa.me/27734843076?text=Hi%20Diva%20Gas%2C%20I%20need%20a%2012kg%20refill%2Fexchange." target="_blank" rel="noopener">WhatsApp us directly</a> — same price promise, we just don't have a product photo for it yet. Not sure which size you have? <a href="https://wa.me/27734843076?text=Hi%20Diva%20Gas%2C%20not%20sure%20what%20size%20my%20bottle%20is%20%E2%80%94%20can%20I%20send%20a%20photo%3F" target="_blank" rel="noopener">Send us a photo</a> and we'll tell you.</p>
   </div>
 </section>
 
